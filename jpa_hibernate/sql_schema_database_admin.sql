@@ -1,0 +1,11 @@
+CREATE TABLE Pessoa (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255),
+    email VARCHAR(255)
+);
+
+CREATE TABLE Produto (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255),
+    preco DOUBLE
+);

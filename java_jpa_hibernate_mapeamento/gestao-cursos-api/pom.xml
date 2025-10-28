@@ -4,11 +4,10 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.techcamps.gestao</groupId>
-    <artifactId>gestao-cursos-api</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>Gestão de Cursos API</name>
-    <description>Aplicação CRUD para Gestão de Cursos com JPA, Hibernate e SQLite</description>
+	<groupId>com.techcamps.gestao.cursos</groupId>
+	<artifactId>gestao-cursos-api</artifactId>
+	<name>Projeto de Gestão de Cursos</name>
+	<description>Projeto Gestão de Cursos usando Hibernate e JPA</description>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

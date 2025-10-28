@@ -1,49 +1,49 @@
 package models;
 
-import entities.Curso;
+import entities.Aluno;
 import jakarta.persistence.*;
 
 import java.util.List;
 
-public class CursoModel {
+public class AlunoModel {
     private EntityManagerFactory emf = Persistence.createEntityManagerFactory("meuPU");
 
-    public void create(Curso curso) {
+    public void create(Aluno aluno) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        em.persist(curso);
+        em.persist(aluno);
         em.getTransaction().commit();
         em.close();
     }
 
-    public Curso findById(Long id) {
+    public Aluno findById(Long id) {
         EntityManager em = emf.createEntityManager();
-        Curso curso = em.find(Curso.class, id);
+        Aluno aluno = em.find(Aluno.class, id);
         em.close();
-        return curso;
+        return aluno;
     }
 
-    public List<Curso> findAll() {
+    public List<Aluno> findAll() {
         EntityManager em = emf.createEntityManager();
-        List<Curso> cursos = em.createQuery("SELECT c FROM Curso c", Curso.class).getResultList();
+        List<Aluno> alunos = em.createQuery("SELECT a FROM Aluno a", Aluno.class).getResultList();
         em.close();
-        return cursos;
+        return alunos;
     }
 
-    public void update(Curso curso) {
+    public void update(Aluno aluno) {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
-        em.merge(curso);
+        em.merge(aluno);
         em.getTransaction().commit();
         em.close();
     }
 
     public void delete(Long id) {
         EntityManager em = emf.createEntityManager();
-        Curso curso = em.find(Curso.class, id);
-        if (curso != null) {
+        Aluno aluno = em.find(Aluno.class, id);
+        if (aluno != null) {
             em.getTransaction().begin();
-            em.remove(curso);
+            em.remove(aluno);
             em.getTransaction().commit();
         }
         em.close();
